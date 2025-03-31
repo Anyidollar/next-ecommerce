@@ -13,7 +13,6 @@ const SearchBar = () => {
     if (name) {
       router.push(`/list?name=${name}`);
     }
-    
   };
 
   return (
