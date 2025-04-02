@@ -1,7 +1,6 @@
 import ProductList from "@/components/ProductList";
 import CategoryList from "@/components/CategoryList";
 import Slider from "@/components/Slider";
-import Filter from "@/components/Filter";
 
 const HomePage = () => {
   return (
@@ -21,11 +20,6 @@ const HomePage = () => {
         <h1 className="text-2xl">New Products</h1>
         <ProductList />
       </div>
-      {/* FILTER */}
-      <Filter />
-      {/* PRODUCTS */}
-      <h1>Shoes for you!</h1>
-      <ProductList />
     </div>
   );
 };
