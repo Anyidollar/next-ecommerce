@@ -1,5 +1,8 @@
 import ProductImages from "@/components/ProductImages";
 import React from "react";
+import config from "../../../tailwind.config";
+import CustomizeProducts from "@/components/CustomizeProducts";
+import Add from "@/components/Add";
 
 const SinglePage = () => {
   return (
@@ -9,7 +12,50 @@ const SinglePage = () => {
         <ProductImages />
       </div>
       {/* TEXT */}
-      <div className="w-full lg:w-1/2 flex flex-col gap-6">TEXTS</div>
+      <div className="w-full lg:w-1/2 flex flex-col gap-6">
+        <h1 className="text-4xl font-medium">Product Name</h1>
+        <p className="text-gray-500">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ea,
+          earum unde facere omnis minus inventore velit sint accusamus magnam
+          iure totam enim deleniti beatae neque. Sed quos cupiditate eaque.
+        </p>
+        <div className="h-[2px] bg-gray-100" />
+        <div className="flex items-center gap-4">
+          <h3 className="text-xl text-gray-500 line-through">$59</h3>
+          <h2 className="font-medium text-2xl">$49</h2>
+        </div>
+        <div className="h-[2px] bg-gray-100" />
+        <CustomizeProducts />
+        <Add />
+        <div className="h-[2px] bg-gray-100" />
+        <div className="text-sm">
+          <h4 className="font-medium mb-4">Title</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+            explicabo beatae corporis perferendis, ducimus nostrum non illum
+            voluptatem blanditiis animi sunt, mollitia modi, recusandae commodi
+            quas! Aperiam maiores quibusdam officia?
+          </p>
+        </div>
+        <div className="text-sm">
+          <h4 className="font-medium mb-4">Title</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+            explicabo beatae corporis perferendis, ducimus nostrum non illum
+            voluptatem blanditiis animi sunt, mollitia modi, recusandae commodi
+            quas! Aperiam maiores quibusdam officia?
+          </p>
+        </div>
+        <div className="text-sm">
+          <h4 className="font-medium mb-4">Title</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+            explicabo beatae corporis perferendis, ducimus nostrum non illum
+            voluptatem blanditiis animi sunt, mollitia modi, recusandae commodi
+            quas! Aperiam maiores quibusdam officia?
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
