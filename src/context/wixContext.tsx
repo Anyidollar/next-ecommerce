@@ -10,6 +10,7 @@ const refreshToken = JSON.parse(Cookie.get("refreshToken") || "{}");
 const wixClient = createClient({
   modules: {
     products,
+    collections,
     // currentCart
   },
   auth: OAuthStrategy({
