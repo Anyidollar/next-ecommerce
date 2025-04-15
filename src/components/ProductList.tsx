@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const ProductList = () => {
+const ProductList = async ({
+  categoryId,
+  limit,
+}: {
+  categoryId: string;
+  limit: number;
+}) => {
   return (
     <div className="mt-12 flex gap-x-8 gap-y-16 justify-between flex-wrap">
       <Link

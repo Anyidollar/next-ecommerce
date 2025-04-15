@@ -1,11 +1,21 @@
-import { createClient } from "@wix/sdk";
+import { createClient, OAuthStrategy } from "@wix/sdk";
 import { products, collections } from '@wix/stores';
 import { cookies } from "next/headers";
 
 
-const refreshToken = JSON.parse(Cookie.get("refreshToken") || "{}");
+export const wixClientServer = async () =>{
 
-export const wixClientServer = createClient({
+
+let refreshToken:any
+try {
+const cookieStore = cookies();
+const refreshToken = JSON.parse(cookieStore.get("refreshToken")?.value || "{}");
+    
+} catch (error) {
+    
+}
+
+ const wixClient = createClient({
   modules: {
     products,
     collections,
@@ -19,3 +29,5 @@ export const wixClientServer = createClient({
     },
   }),
 });
+return wixClient
+}
